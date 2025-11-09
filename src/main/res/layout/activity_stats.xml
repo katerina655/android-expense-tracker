@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F3FF"
+    tools:context=".StatsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/backButton"
+        android:fillViewport="true"
+        android:padding="24dp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideInset"
+        android:layout_marginBottom="90dp">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- ΤΙΤΛΟΣ -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Στατιστικά Εξόδων"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2D1B69"
+                android:layout_marginBottom="16dp" />
+
+            <!--  ΚΟΥΜΠΙΑ  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/buttonDayStats"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="64dp"
+                    android:text="📅 Ανά Ημέρα"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/rounded_button" />
+
+                <Button
+                    android:id="@+id/buttonWeekStats"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="64dp"
+                    android:text="🗓️ Ανά Εβδομάδα"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/purple_400"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/rounded_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/summaryCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:elevation="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="8dp"
+                android:clipToOutline="true">
+
+                <TextView
+                    android:id="@+id/textViewSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Φόρτωση..."
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="#2B2B2B" />
+            </LinearLayout>
+
+            <!--  ΛΙΣΤΑ ΗΜΕΡΩΝ -->
+            <LinearLayout
+                android:id="@+id/listCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:elevation="5dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Επιλέξτε ημέρα για λεπτομέρειες:"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#2D1B69"
+                    android:layout_marginBottom="10dp" />
+
+                <ListView
+                    android:id="@+id/listViewDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:divider="#DADADA"
+                    android:dividerHeight="1dp"
+                    android:padding="6dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  ΚΟΥΜΠΙ ΕΠΙΣΤΡΟΦΗΣ -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="220dp"
+        android:layout_height="64dp"
+        android:text="← Επιστροφή"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:elevation="8dp"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

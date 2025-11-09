@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FAF9FF"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- ΤΙΤΛΟΣ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Καταγραφή Εξόδων"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D1B69"
+            android:layout_marginBottom="28dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- ΠΕΔΙΟ ΠΟΣΟΥ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ποσό (€)"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="start" />
+
+        <EditText
+            android:id="@+id/expenseInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="π.χ. 15.50"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ΠΕΔΙΟ ΚΑΤΗΓΟΡΙΑΣ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Κατηγορία"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="start" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_input"
+            android:paddingHorizontal="12dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="28dp" />
+
+        <!-- ΚΟΥΜΠΙΑ -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text=" Αποθήκευση"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonStats"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text=" Προβολή Στατιστικών"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_alt"
+            android:layout_marginBottom="30dp" />
+
+        <!-- ΣΥΝΟΛΟ -->
+        <TextView
+            android:id="@+id/todayTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Σύνολο σημερινών εξόδων: 0.0€"
+            android:textSize="20sp"
+            android:textColor="#2D1B69"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

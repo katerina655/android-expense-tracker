@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Χρώμα φόντου -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Στρογγυλεμένες γωνίες -->
+    <corners android:radius="18dp" />
+
+    <!-- Περιγράμματος -->
+    <stroke
+        android:width="2dp"
+        android:color="#DDDDDD" />
+</shape>

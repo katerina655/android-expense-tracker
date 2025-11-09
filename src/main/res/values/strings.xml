@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My ExpenseTracker</string>
+
+    <string name="record_expense">Καταγραφή Εξόδων</string>
+    <string name="amount_hint">Π.χ. 15.50</string>
+    <string name="category_label">Κατηγορία</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="view_stats">Προβολή Στατιστικών</string>
+    <string name="today_total">Σύνολο σημερινών εξόδων: 0€</string>
+
+    <!-- Λίστα κατηγοριών  -->
+    <string-array name="categories">
+        <item>Φαγητό</item>
+        <item>Ρούχα</item>
+        <item>Μετακινήσεις</item>
+        <item>Ψυχαγωγία</item>
+        <item>Άλλο</item>
+        <item>+ Προσθήκη νέας...</item> \
+    </string-array>
+
+\    <string name="title_activity_stats">Στατιστικά Εξόδων</string>
+</resources>
